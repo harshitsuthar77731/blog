@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 //connecting to mongodb
-mongoose.connect('mongodb://localhost:27017/blogDB');
+mongoose.connect('mongodb+srv://harshit-admin:1234@cluster0.zcq4o.mongodb.net/blogDB');
 
 
 //declaring variables and all
