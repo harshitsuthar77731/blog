@@ -1,11 +1,17 @@
 <%- include('partial/header'); -%>
+
+
+
+
+
 <h1>Home</h1>
 <p><%=hcontent%></p>
 
-<%postToPublish.forEach(function(post){%>
-   <h1><%=post.posttitle%></h1>
-   <p><%=post.postbody.substring(0,100)+"..."%><a href="/post/<%=post.posttitle%>">readmore</a></p>
+<%postToPublish.forEach(function(data){%>
+   <h1><%=data.postTitle%></h1>
+   <p><%=data.postBody.substring(0,100)+"..."%><a href="/post/<%=data._id%>">readmore</a></p>
 <%})%>
 
 <a href="http://localhost:3000/compose" id="aa"> <button class="btn btn-primary">Compose</button></a>
+
 <%- include('partial/footer'); -%>
